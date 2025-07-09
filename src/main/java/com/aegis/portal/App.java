@@ -19,6 +19,7 @@ public class App {
         com.aegis.portal.migration.UserSync.main(args);
         
 
-        System.out.println("User sync process completed.");
+		System.out.println("User sync process completed."); 
+		System.out.println("testing purpose");
     }
 }
