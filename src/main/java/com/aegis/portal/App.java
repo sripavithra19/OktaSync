@@ -20,5 +20,6 @@ public class App {
         
 
         System.out.println("User sync process completed.");
+        System.out.println("Testing for tkt-events");
     }
 }
