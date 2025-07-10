@@ -1,7 +1,6 @@
 package com.aegis.portal.migration;
 
-import java.util.List;
-
+import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,50 +9,51 @@ import com.aegis.portal.model.EventsDTO;
 import com.aegis.portal.model.PortalUser;
 import com.aegis.portal.okta.OktaService;
 import com.aegis.portal.util.CommonUtil;
-
 public class UserSync {
 
-	private static final Logger logger = LoggerFactory.getLogger(UserSync.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserSync.class);
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		logger.info("=== Aegis User and Event Sync ===");
+        logger.info("=== Aegis User and Event Sync ===");
 
-		String portalEnv = null;
-		String oktaEnv = null;
-		if (args.length == 2) {
-			portalEnv = args[0];
-			oktaEnv = args[1];
-		} else {
-			logger.error("Invalid Arguments. Required Portal Environment and Okta Environment");
-			System.exit(0);
-		}
-		logger.info("Portal Env: {}", portalEnv);
-		logger.info("Okta Env: {}", oktaEnv);
+        if (args.length != 2) {
+            logger.error("Invalid Arguments. Required: <PortalEnv> <OktaEnv>");
+            System.exit(1);
+        }
 
-		try {
-			// Initialize services
-			OktaService oktaService = new OktaService(oktaEnv);
-			oktaService.getClient(oktaEnv);
+        String portalEnv = args[0];
+        String oktaEnv = args[1];
 
-			DBService dbService = new DBService(portalEnv);
-			CommonUtil util = new CommonUtil();
+        logger.info("Portal Env: {}", portalEnv);
+        logger.info("Okta Env: {}", oktaEnv);
 
-			String lastSyncDate = util.getLastSyncDate();
-			List<PortalUser> oktaUsers = oktaService.fetchAllOktaUsers();
-			dbService.insertUsers(oktaUsers);
+        try {
+            OktaService oktaService = new OktaService(oktaEnv);
+            DBService dbService = new DBService(portalEnv);
+            CommonUtil util = new CommonUtil();
 
-			List<EventsDTO> events = oktaService.fetchEvents(lastSyncDate);
+            String lastSyncDate = util.getLastSyncDate();
 
-			if (!events.isEmpty()) {
-				dbService.insertEvents(events);
-				util.saveLastSyncDate();
-			} else {
-				logger.info("No new events fetched.");
-			}
+            // Step 1: Sync users
+            List<PortalUser> oktaUsers = oktaService.fetchAllOktaUsers();
+            dbService.insertUsers(oktaUsers);
 
-		} catch (Exception e) {
-			logger.error("Error running sync job: {}", e.getMessage(), e);
-		}
-	}
+            // Step 2: Get email-to-ID map
+            Map<String, String> emailToIdMap = dbService.getUserEmailIdMap();
+
+            // Step 3: Fetch Okta events since last sync
+            List<EventsDTO> events = oktaService.fetchEvents(lastSyncDate);
+
+            if (!events.isEmpty()) {
+                dbService.insertEvents(events, emailToIdMap);
+                util.saveLastSyncDate();
+            } else {
+                logger.info("No new events fetched.");
+            }
+
+        } catch (Exception e) {
+            logger.error("Error running sync job: {}", e.getMessage(), e);
+        }
+    }
 }

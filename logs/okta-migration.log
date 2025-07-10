@@ -2422,3 +2422,159 @@ java.time.format.DateTimeParseException: Text '2025-07-09 11:55:03' could not be
 [INFO ] 2025-07-09 11:58:01.612 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@18b8d173
 [INFO ] 2025-07-09 11:58:01.741 [main] DBService - Inserted 18 events into DSS_DPS_EVENT
 [INFO ] 2025-07-09 11:58:01.743 [main] CommonUtil - Last Sync date is updated to 2025-07-09 11:58:01
+[INFO ] 2025-07-10 12:08:59.187 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:08:59.192 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:08:59.192 [main] UserSync - Okta Env: prd
+[INFO ] 2025-07-10 12:08:59.199 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[ERROR] 2025-07-10 12:08:59.653 [main] OktaService - Error fetching users by login timestamp from Okta: Text '2025-06-29T11:06:50Z' could not be parsed at index 10
+[INFO ] 2025-07-10 12:08:59.653 [main] UserSync - No users logged in since last sync.
+[INFO ] 2025-07-10 12:09:02.033 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@7c1812b3
+[INFO ] 2025-07-10 12:09:02.265 [main] DBService - Inserted 18 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:09:02.268 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:09:02
+[INFO ] 2025-07-10 12:12:07.571 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:12:07.575 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:12:07.575 [main] UserSync - Okta Env: prd
+[INFO ] 2025-07-10 12:12:07.583 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[ERROR] 2025-07-10 12:12:07.993 [main] OktaService - Error fetching users by login timestamp from Okta: Text '2025-06-30T11:06:50Z' could not be parsed at index 10
+[INFO ] 2025-07-10 12:12:07.993 [main] UserSync - No users logged in since last sync.
+[INFO ] 2025-07-10 12:12:09.826 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@7c1812b3
+[WARN ] 2025-07-10 12:12:10.022 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.023 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.024 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.025 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.026 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.028 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.028 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:12:10.029 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:12:10.030 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:12:10.031 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:12:10.032 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:12:10.033 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:12:10.034 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.035 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.036 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.038 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.039 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:12:10.039 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[INFO ] 2025-07-10 12:12:10.040 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:12:10.043 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:12:10
+[INFO ] 2025-07-10 12:21:15.203 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:21:15.208 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:21:15.208 [main] UserSync - Okta Env: prd
+[INFO ] 2025-07-10 12:21:15.216 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[ERROR] 2025-07-10 12:21:15.685 [main] OktaService - Error fetching users by login timestamp from Okta: Text '2025-06-30T11:06:50Z' could not be parsed at index 10
+[INFO ] 2025-07-10 12:21:15.686 [main] UserSync - No users logged in since last sync.
+[INFO ] 2025-07-10 12:21:17.577 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@7c1812b3
+[WARN ] 2025-07-10 12:21:17.777 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:21:17.778 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:21:17.779 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:21:17.779 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:21:17.779 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.779 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.780 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.780 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.780 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:21:17.780 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[INFO ] 2025-07-10 12:21:17.781 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:21:17.783 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:21:17
+[INFO ] 2025-07-10 12:21:17.784 [main] UserSync - User sync process completed.
+[INFO ] 2025-07-10 12:25:10.815 [main] UserSync - === Aegis User and Event Sync ===
+[ERROR] 2025-07-10 12:25:10.817 [main] UserSync - Invalid Arguments. Usage: <Portal Environment> <Okta Environment>
+[INFO ] 2025-07-10 12:25:57.473 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:25:57.479 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:25:57.479 [main] UserSync - Okta Env: dev
+[INFO ] 2025-07-10 12:25:57.485 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[ERROR] 2025-07-10 12:25:57.923 [main] OktaService - Error fetching users by login timestamp from Okta: Text '2025-06-30T11:06:50Z' could not be parsed at index 10
+[INFO ] 2025-07-10 12:25:57.923 [main] UserSync - No users logged in since last sync.
+[INFO ] 2025-07-10 12:25:59.821 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@7c1812b3
+[WARN ] 2025-07-10 12:26:00.047 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.048 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.048 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.049 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.049 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.049 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.050 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:26:00.050 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:26:00.050 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:26:00.050 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.051 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.052 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.052 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.052 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.052 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:26:00.052 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[INFO ] 2025-07-10 12:26:00.052 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:26:00.055 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:26:00
+[INFO ] 2025-07-10 12:26:00.056 [main] UserSync - User sync process completed.
+[INFO ] 2025-07-10 12:28:57.528 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:28:57.531 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:28:57.531 [main] UserSync - Okta Env: dev
+[INFO ] 2025-07-10 12:28:57.539 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[INFO ] 2025-07-10 12:28:57.940 [main] OktaService - Using filter: lastLogin ge "2025-06-30T11:06:50Z"
+[ERROR] 2025-07-10 12:28:59.255 [main] OktaService - Error fetching users by login timestamp from Okta: HTTP 400, Okta E0000031 (Invalid search criteria. - Invalid search attribute.), ErrorId oaeuGT9aCzMSZOIGjTf3-L_rQ
+[INFO ] 2025-07-10 12:28:59.255 [main] UserSync - No users logged in since last sync.
+[INFO ] 2025-07-10 12:29:00.971 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@572e6fd9
+[WARN ] 2025-07-10 12:29:01.201 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.201 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.201 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.202 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.202 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.202 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.203 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:29:01.203 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[WARN ] 2025-07-10 12:29:01.203 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:29:01.203 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: againtesting1993@gmail.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.204 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.205 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.205 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.205 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2025-07-10 12:29:01.205 [main] DBService - No user ID found for email: test3oktatesting@gmail.com
+[INFO ] 2025-07-10 12:29:01.205 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:29:01.207 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:29:01
+[INFO ] 2025-07-10 12:29:01.208 [main] UserSync - User sync process completed.
+[INFO ] 2025-07-10 12:34:41.789 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:34:41.793 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:34:41.793 [main] UserSync - Okta Env: dev
+[INFO ] 2025-07-10 12:34:41.812 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[ERROR] 2025-07-10 12:34:42.258 [main] OktaService - Error fetching users by login timestamp from Okta: Text '2025-07-10 12:29:01' could not be parsed at index 10
+[INFO ] 2025-07-10 12:34:42.258 [main] UserSync - No users logged in since last sync.
+[ERROR] 2025-07-10 12:34:42.258 [main] OktaService - Error fetching events from Okta: Text '2025-07-10 12:29:01' could not be parsed at index 10
+java.time.format.DateTimeParseException: Text '2025-07-10 12:29:01' could not be parsed at index 10
+	at java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2108) ~[?:?]
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2010) ~[?:?]
+	at java.time.Instant.parse(Instant.java:398) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:147) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:55) ~[classes/:?]
+[INFO ] 2025-07-10 12:34:42.269 [main] UserSync - No new events fetched.
+[INFO ] 2025-07-10 12:34:42.269 [main] UserSync - User sync process completed.
+[INFO ] 2025-07-10 12:44:54.464 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-10 12:44:54.469 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-10 12:44:54.469 [main] UserSync - Okta Env: dev
+[INFO ] 2025-07-10 12:44:54.477 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[INFO ] 2025-07-10 12:44:56.832 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@6a9d5dff
+[INFO ] 2025-07-10 12:44:56.952 [main] DBService - Inserted or skipped 6 users into DPS_USER
+[INFO ] 2025-07-10 12:44:56.976 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1ff55ff
+[INFO ] 2025-07-10 12:44:58.904 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@42383cb0
+[INFO ] 2025-07-10 12:44:58.912 [main] DBService - Inserted 22 events into DSS_DPS_EVENT
+[INFO ] 2025-07-10 12:44:58.915 [main] CommonUtil - Last Sync date is updated to 2025-07-10 12:44:58
