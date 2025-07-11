@@ -26,10 +26,13 @@ import com.aegis.portal.util.IConstants;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.okta.sdk.authc.credentials.TokenClientCredentials;
-import com.okta.sdk.client.Client;
+//import com.okta.sdk.client.Client;
 import com.okta.sdk.client.Clients;
-import com.okta.sdk.resource.user.User;
-import com.okta.sdk.resource.user.UserList;
+//import com.okta.sdk.resource.user.User;
+//import com.okta.sdk.resource.user.UserList;
+import com.okta.sdk.resource.api.UserApi;
+import com.okta.sdk.resource.model.User;
+import com.okta.sdk.resource.client.ApiClient;
 
 public class OktaService {
 
@@ -44,7 +47,7 @@ public class OktaService {
 		this.oktaEnv = oktaEnv;
 	}
 
-	public Client getClient(String oktaEnv) throws Exception {
+	public ApiClient getClient(String oktaEnv) throws Exception {
 
 		ResourceBundle resBundle = ResourceBundle.getBundle("oktaConfiguration");
 		if (resBundle == null)
@@ -74,10 +77,10 @@ public class OktaService {
 		List<PortalUser> userList = new ArrayList<>();
 
 		try {
-			Client client = getClient(oktaEnv);
+			ApiClient client = getClient(oktaEnv);
 
-			UserList users = client.listUsers();
-
+			UserApi userApi = new UserApi(client);
+			List<User> users = userApi.listUsers(null, null, null, null, null, null, null, null);
 			for (User user : users) {
 				PortalUser pUser = new PortalUser();
 				pUser.setLogin(user.getProfile().getLogin());
@@ -97,8 +100,8 @@ public class OktaService {
 	public List<String> getUsersLoggedInSince(String sinceDateTime) {
 		List<String> emailList = new ArrayList<>();
 		try {
-			Client client = getClient(oktaEnv);
-
+			ApiClient client = getClient(oktaEnv);
+			UserApi userApi = new UserApi(client);
 			// Convert lastSyncDate to ISO 8601 format
 			Instant instant = LocalDateTime.parse(sinceDateTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
 					.atZone(ZoneId.systemDefault()).toInstant();
@@ -107,7 +110,7 @@ public class OktaService {
 			String filter = "lastLogin ge \"" + isoTime + "\"";
 			logger.info("Using filter: {}", filter);
 
-			UserList users = client.listUsers(null, null, filter, null, null);
+			List<User> users = userApi.listUsers(null, null, null, null, filter, null, null, null);
 			for (User user : users) {
 				emailList.add(user.getProfile().getEmail());
 			}

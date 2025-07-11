@@ -80,55 +80,53 @@ public class DBService {
 	 */
 
 	public void insertEvents(List<EventsDTO> eventList, Map<String, String> emailToIdMap) {
-	    String sql = "INSERT INTO DSS_DPS_EVENT (ID, TIMESTAMP, SESSIONID, PROFILEID) "
-	               + "VALUES (?, TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?)";
+		String sql = "INSERT INTO DSS_DPS_EVENT (ID, TIMESTAMP, SESSIONID, PROFILEID) "
+				+ "VALUES (?, TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?)";
 
-	    try (Connection con = new DBConnection(env).getConnection();
-	         PreparedStatement ps = con.prepareStatement(sql)) {
+		try (Connection con = new DBConnection(env).getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
 
-	        for (EventsDTO evt : eventList) {
-	            String userId = emailToIdMap.get(evt.getProfileId());
+			for (EventsDTO evt : eventList) {
+				String userId = emailToIdMap.get(evt.getProfileId());
 
-	            if (userId != null) {
-	                ps.setString(1, evt.getId());
-	                ps.setString(2, evt.getTimestamp());
-	                ps.setString(3, evt.getSessionId() != null ? evt.getSessionId() : "");
-	                ps.setString(4, userId);
-	                ps.addBatch();
-	            } else {
-	                logger.warn("No user ID found for email: {}", evt.getProfileId());
-	            }
-	        }
+				if (userId != null) {
+					ps.setString(1, evt.getId());
+					ps.setString(2, evt.getTimestamp());
+					ps.setString(3, evt.getSessionId() != null ? evt.getSessionId() : "");
+					ps.setString(4, userId);
+					ps.addBatch();
+				} else {
+					logger.warn("No user ID found for email: {}", evt.getProfileId());
+				}
+			}
 
-	        int[] inserted = ps.executeBatch();
-	        logger.info("Inserted {} events into DSS_DPS_EVENT", inserted.length);
+			int[] inserted = ps.executeBatch();
+			logger.info("Inserted {} events into DSS_DPS_EVENT", inserted.length);
 
-	    } catch (Exception e) {
-	        logger.error("Error inserting events: {}", e.getMessage(), e);
-	    }
+		} catch (Exception e) {
+			logger.error("Error inserting events: {}", e.getMessage(), e);
+		}
 	}
 
-
 	public Map<String, String> getUserEmailIdMap() {
-	    Map<String, String> emailToIdMap = new HashMap<>();
-	    String sql = "SELECT ID, EMAIL FROM DPS_USER";
+		Map<String, String> emailToIdMap = new HashMap<>();
+		String sql = "SELECT ID, EMAIL FROM DPS_USER";
 
-	    try (Connection con = new DBConnection(env).getConnection();
-	         PreparedStatement ps = con.prepareStatement(sql);
-	         ResultSet rs = ps.executeQuery()) {
+		try (Connection con = new DBConnection(env).getConnection();
+				PreparedStatement ps = con.prepareStatement(sql);
+				ResultSet rs = ps.executeQuery()) {
 
-	        while (rs.next()) {
-	            emailToIdMap.put(rs.getString("EMAIL"), rs.getString("ID"));
-	        }
+			while (rs.next()) {
+				emailToIdMap.put(rs.getString("EMAIL"), rs.getString("ID"));
+			}
 
-	    } catch (SQLException e) {
-	        logger.error("Error fetching user ID map: {}", e.getMessage(), e);
-	    } catch (Exception e1) {
+		} catch (SQLException e) {
+			logger.error("Error fetching user ID map: {}", e.getMessage(), e);
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
-	    return emailToIdMap;
+		return emailToIdMap;
 	}
 
 }
