@@ -2613,3 +2613,13 @@ java.time.format.DateTimeParseException: Text '2025-07-11 22:07:39' could not be
 [INFO ] 2025-07-11 22:08:54.782 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@4f654cee
 [INFO ] 2025-07-11 22:08:54.789 [main] DBService - Inserted 24 events into DSS_DPS_EVENT
 [INFO ] 2025-07-11 22:08:54.791 [main] CommonUtil - Last Sync date is updated to 2025-07-11 22:08:54
+[INFO ] 2025-07-14 13:11:05.745 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2025-07-14 13:11:05.750 [main] UserSync - Portal Env: dev
+[INFO ] 2025-07-14 13:11:05.751 [main] UserSync - Okta Env: dev
+[INFO ] 2025-07-14 13:11:05.815 [main] OktaService - oktaURL = https://trial-6355671.okta.com, TokenCredentials = 00dHebEq8N51PNzOXIevshuOVlr-O6KnP6J7FxNrqq, AEGISlinkAppID = 0oas65pry3i2vgvpb697
+[INFO ] 2025-07-14 13:11:08.590 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58a4a74d
+[INFO ] 2025-07-14 13:11:08.740 [main] DBService - Inserted or skipped 6 users into DPS_USER
+[INFO ] 2025-07-14 13:11:08.763 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@79d06bbd
+[INFO ] 2025-07-14 13:11:10.292 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2f10f633
+[INFO ] 2025-07-14 13:11:10.299 [main] DBService - Inserted 24 events into DSS_DPS_EVENT
+[INFO ] 2025-07-14 13:11:10.301 [main] CommonUtil - Last Sync date is updated to 2025-07-14 13:11:10
