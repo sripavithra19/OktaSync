@@ -17,6 +17,7 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import java.util.TimeZone;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,50 +43,39 @@ public class CommonUtil {
 		}
 		return syncDtStr;
 	}
+	
+
 
 	public void saveLastSyncDate() {
-		String syncDtStr = "";
-		try {
-			Date date = new Date();
-			// SimpleDateFormat formatter = new SimpleDateFormat("yy-MMM-dd");
-			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    try {
+	        // Format current time in IST
+	        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	        formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+	        String syncDtStr = formatter.format(new Date());
 
-			syncDtStr = formatter.format(date);
-			URL url = this.getClass().getClassLoader().getResource("lastRunDate.properties");
-			File file = null;
-			try {
-				file = new File(url.toURI());
-			} catch (URISyntaxException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			if (file == null) {
-				logger.error("File lastRunDate.properties is null so not saving lastSync date");
-				return;
-			}
-			BufferedWriter bufWriter = new BufferedWriter(new FileWriter(file));
+	        // Locate the properties file
+	        URL url = this.getClass().getClassLoader().getResource("lastRunDate.properties");
+	        if (url == null) {
+	            logger.error("File lastRunDate.properties is not found in classpath");
+	            return;
+	        }
 
-			bufWriter.write(syncDtStr);
-			logger.info("Last Sync date is updated to {}", syncDtStr);
+	        File file;
+	        try {
+	            file = new File(url.toURI());
+	        } catch (URISyntaxException e) {
+	            logger.error("Error converting URL to URI: {}", e.getMessage());
+	            return;
+	        }
 
-			if (bufWriter != null) {
-				bufWriter.close();
-			}
+	        // Write IST-formatted date to file
+	        try (BufferedWriter bufWriter = new BufferedWriter(new FileWriter(file))) {
+	            bufWriter.write(syncDtStr);
+	            logger.info("Last Sync date is updated to {}", syncDtStr);
+	        }
 
-		} catch (IOException e) {
-			logger.error(e.getMessage());
-		}
-
+	    } catch (IOException e) {
+	        logger.error("Failed to save last sync date: {}", e.getMessage(), e);
+	    }
 	}
-
-	public void updateLastSyncDate(String newDateTime) {
-		try (FileOutputStream output = new FileOutputStream("lastRunDate.properties")) {
-			Properties prop = new Properties();
-			prop.setProperty("lastRunDate", newDateTime);
-			prop.store(output, null);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }

@@ -1,6 +1,13 @@
 package com.aegis.portal.migration;
 
-import java.util.*;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,8 +40,27 @@ public class UserSync {
 			OktaService oktaService = new OktaService(oktaEnv);
 			DBService dbService = new DBService(portalEnv);
 			CommonUtil util = new CommonUtil();
+			String lstSyncDtStr = util.getLastSyncDate(); // IST format like "2025-07-24 12:34:56"
 
-			String lastSyncDate = util.getLastSyncDate();
+			if (lstSyncDtStr == null || lstSyncDtStr.isEmpty()) {
+			    logger.error("Last sync date is null or empty");
+			    System.exit(1);
+			}
+
+			// Parse IST string to LocalDateTime
+			DateTimeFormatter istFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+			LocalDateTime lstSyncdateTime = LocalDateTime.parse(lstSyncDtStr, istFormatter);
+
+			// Convert LocalDateTime in IST to UTC ISO 8601 format
+			ZonedDateTime istZoned = lstSyncdateTime.atZone(ZoneId.of("Asia/Kolkata"));
+			ZonedDateTime utcZoned = istZoned.withZoneSameInstant(ZoneOffset.UTC);
+
+			// Format to Okta-compatible ISO 8601
+			DateTimeFormatter utcFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+			String formattedDateTime = utcZoned.format(utcFormatter);
+
+			logger.info("Last Sync Date in UTC: {}", formattedDateTime);
+
 
 			// Step 1: Sync users
 			List<PortalUser> oktaUsers = oktaService.fetchAllOktaUsers();
@@ -44,7 +70,7 @@ public class UserSync {
 			Map<String, String> emailToIdMap = dbService.getUserEmailIdMap();
 
 			// Step 3: Fetch Okta events since last sync
-			List<EventsDTO> events = oktaService.fetchEvents(lastSyncDate);
+			List<EventsDTO> events = oktaService.fetchEvents(formattedDateTime);
 
 			if (!events.isEmpty()) {
 				dbService.insertEvents(events, emailToIdMap);
