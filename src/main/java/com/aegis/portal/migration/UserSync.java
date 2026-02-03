@@ -69,7 +69,7 @@ public class UserSync {
             Map<String, String> emailToIdMap = dbService.getUserEmailIdMap();
 
             // Step 3: Fetch Okta events since last sync
-            List<EventsDTO> events = oktaService.fetchEvents(formattedDateTime);
+            List<EventsDTO> events = oktaService.fetchEvents();
 
             if (!events.isEmpty()) {
                 dbService.insertEvents(events, emailToIdMap);

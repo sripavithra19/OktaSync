@@ -7,6 +7,8 @@ import com.aegis.portal.db.DBService;
 import com.aegis.portal.model.OktaEmailFailure;
 import com.aegis.portal.okta.OktaService;
 
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,25 +64,35 @@ public class EmailMonitorService {
     }
     
     private void sendNotifications(List<OktaEmailFailure> failures) {
+
+        ZoneId EASTERN = ZoneId.of("America/New_York");
+
+        DateTimeFormatter etFormatter =
+                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                                 .withZone(EASTERN);
+
         for (OktaEmailFailure failure : failures) {
-            String message = String.format(
-                "EMAIL FAILURE ALERT: Failed to send email to %s. Reason: %s",
-                failure.getTargetUserEmail(),
-                failure.getFailureReason()
+
+            String eventTime = failure.getEventTime() != null
+                    ? etFormatter.format(failure.getEventTime()) + " ET"
+                    : "UNKNOWN_TIME";
+
+            String email = failure.getTargetUserEmail() != null
+                    ? failure.getTargetUserEmail()
+                    : "UNKNOWN_EMAIL";
+
+            String reason = failure.getFailureReason() != null
+                    ? failure.getFailureReason()
+                    : "UNKNOWN_REASON";
+
+            String eventId = failure.getEventId() != null
+                    ? failure.getEventId()
+                    : "UNKNOWN_EVENT_ID";
+
+            logger.warn(
+                "[OKTA_EMAIL_FAILURE] time={} | email={} | reason={} | eventId={}",
+                eventTime, email, reason, eventId
             );
-            
-            logger.warn(message);
-            
-            // TODO: Integrate with your notification system
-            // You can add:
-            // - Email notifications
-            // - Slack webhooks
-            // - Teams notifications
-            // - SMS alerts
-            
-            // Example:
-            // sendEmailAlert(message);
-            // sendSlackNotification(message);
         }
     }
 }
