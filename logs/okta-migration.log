@@ -5656,3 +5656,72 @@ java.io.IOException: Server returned HTTP response code: 400 for URL: https://in
 [INFO ] 2026-02-03 13:51:58.307 [main] UserSync - Email failure monitoring completed successfully
 [INFO ] 2026-02-03 13:51:58.308 [main] CommonUtil - Last Sync date is updated to 2026-02-03 13:51:58
 [INFO ] 2026-02-03 13:51:58.309 [main] UserSync - Sync process completed
+[INFO ] 2026-02-04 13:25:20.215 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-04 13:25:20.221 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-04 13:25:20.221 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-04 13:25:20.221 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-04 13:25:20.238 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-04 13:25:20.238 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-04 13:25:20.239 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-04 13:25:20.251 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-04 13:25:22.278 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-04 13:25:22.934 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-04 13:25:23.065 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-04 13:25:23.072 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-04 13:25:23.091 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-04 13:25:23.986 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-04 13:25:23.986 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-04 13:25:23.986 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-04 13:25:23.986 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-04 13:25:23.987 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-04 13:25:23.987 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-04 13:25:23.987 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-04 13:25:23.987 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-04 13:25:23.988 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-04 13:25:23.988 [main] OktaService - LOGIN SUCCESS | user=00uy6mzpahJ6AGduo697 | time=2026-01-30T06:40:54
+[INFO ] 2026-02-04 13:25:24.014 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-04 13:25:24.014 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.014 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.015 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-04 13:25:24.016 [main] DBService - No user ID found for email: 00uy6mzpahJ6AGduo697
+[INFO ] 2026-02-04 13:25:24.016 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2026-02-04 13:25:24.018 [main] UserSync - Successfully synced 10 events
+[INFO ] 2026-02-04 13:25:24.020 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-04 13:25:24.020 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-04 13:25:24.020 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-04 13:25:24.021 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-04 13:25:24.039 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@312b34e3
+[INFO ] 2026-02-04 13:25:24.627 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-04 13:25:24.719 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-04 13:25:24.721 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-04 13:25:25.520 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-04 13:25:25.520 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-04 13:25:25.520 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-04 13:25:25.542 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1bc0d349
+[INFO ] 2026-02-04 13:25:25.567 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-04 13:25:25.590 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@20cece0b
+[INFO ] 2026-02-04 13:25:25.638 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-04 13:25:25.639 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-04 13:25:25.639 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-04 13:25:25.667 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14b789f6
+[INFO ] 2026-02-04 13:25:25.676 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-04 13:25:25.677 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-04 13:25:26.402 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-04 13:25:26.402 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-04 13:25:26.402 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-04 13:25:26.403 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-04 13:25:26.403 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-04 13:25:26.403 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-04 13:25:26.403 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-04 13:25:26.404 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-04 13:25:26.404 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-04 13:25:26.404 [main] OktaService - LOGIN SUCCESS | user=00uy6mzpahJ6AGduo697 | time=2026-01-30T06:40:54
+[INFO ] 2026-02-04 13:25:26.404 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-04 13:25:26.405 [main] CommonUtil - Last Sync date is updated to 2026-02-04 13:25:26
+[INFO ] 2026-02-04 13:25:26.406 [main] UserSync - Sync process completed

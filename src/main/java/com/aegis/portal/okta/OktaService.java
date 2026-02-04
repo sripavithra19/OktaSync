@@ -249,7 +249,10 @@ public class OktaService {
 
 	            String eventType = event.path("eventType").asText();
 	            String publishedUtc = event.path("published").asText();
+
 	            String outcome = event.path("outcome").path("result").asText("UNKNOWN");
+	            String failureReason =
+	                    event.path("outcome").path("reason").asText("UNKNOWN_REASON");
 
 	            String sessionId = event
 	                    .path("authenticationContext")
@@ -272,24 +275,49 @@ public class OktaService {
 
 	            eventsList.add(dto);
 
-	            // ---------- Console Output (important) ----------
+	            // ---------- Console Output ----------
 	            if ("user.session.start".equals(eventType)) {
+
 	                if ("FAILURE".equalsIgnoreCase(outcome)) {
-	                    logger.warn("FAILED LOGIN | user={} | time={}",
-	                            profileId, dto.getTimestamp());
+	                    logger.warn(
+	                        "FAILED LOGIN | user={} | reason={} | time={}",
+	                        profileId,
+	                        failureReason,
+	                        dto.getTimestamp()
+	                    );
+
 	                } else {
-	                    logger.info("LOGIN SUCCESS | user={} | time={}",
-	                            profileId, dto.getTimestamp());
+	                    logger.info(
+	                        "LOGIN SUCCESS | user={} | time={}",
+	                        profileId,
+	                        dto.getTimestamp()
+	                    );
 	                }
+
 	            } else if ("user.session.end".equals(eventType)) {
-	                logger.info("LOGOUT | user={} | session={} | time={}",
-	                        profileId, sessionId, dto.getTimestamp());
+
+	                logger.info(
+	                    "LOGOUT | user={} | session={} | time={}",
+	                    profileId,
+	                    sessionId,
+	                    dto.getTimestamp()
+	                );
+
 	            } else if ("user.account.activated".equals(eventType)) {
-	                logger.info("ACCOUNT ACTIVATED | user={} | time={}",
-	                        profileId, dto.getTimestamp());
+
+	                logger.info(
+	                    "ACCOUNT ACTIVATED | user={} | time={}",
+	                    profileId,
+	                    dto.getTimestamp()
+	                );
+
 	            } else if ("user.account.deactivated".equals(eventType)) {
-	                logger.warn("ACCOUNT DEACTIVATED | user={} | time={}",
-	                        profileId, dto.getTimestamp());
+
+	                logger.warn(
+	                    "ACCOUNT DEACTIVATED | user={} | time={}",
+	                    profileId,
+	                    dto.getTimestamp()
+	                );
 	            }
 	        }
 
