@@ -198,134 +198,112 @@ public class OktaService {
 	 */
 	public List<EventsDTO> fetchEvents() {
 
-	    List<EventsDTO> eventsList = new ArrayList<>();
+		List<EventsDTO> eventsList = new ArrayList<>();
 
-	    try {
-	        CommonUtil fileUtil = new CommonUtil();
-	        String lastSyncDtStr = fileUtil.getLastSyncDate();
+		try {
+			CommonUtil fileUtil = new CommonUtil();
+			String lastSyncDtStr = fileUtil.getLastSyncDate();
 
-	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-	        LocalDateTime lastSyncET = LocalDateTime.parse(lastSyncDtStr, formatter);
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+			LocalDateTime lastSyncET = LocalDateTime.parse(lastSyncDtStr, formatter);
 
-	        ZonedDateTime utcDateTime =
-	                lastSyncET.atZone(EASTERN).withZoneSameInstant(ZoneOffset.UTC);
+			ZonedDateTime utcDateTime = lastSyncET.atZone(EASTERN).withZoneSameInstant(ZoneOffset.UTC);
 
-	        String since = utcDateTime.toInstant().toString();
+			String since = utcDateTime.toInstant().toString();
 
-	        String filter =
-	                "eventType eq \"user.session.start\" " +
-	                "or eventType eq \"user.session.end\" " +
-	                "or eventType eq \"user.account.activated\" " +
-	                "or eventType eq \"user.account.deactivated\"";
+			String filter =
+				    "(eventType eq \"user.session.start\" " +
+				    "or eventType eq \"user.session.end\" " +
+				    "or eventType eq \"user.account.activated\" " +
+				    "or eventType eq \"user.account.deactivated\")";
 
-	        String encodedFilter = URLEncoder.encode(filter, "UTF-8");
+			String encodedFilter = URLEncoder.encode(filter, "UTF-8");
 
-	        String urlStr = String.format(
-	                "%s/api/v1/logs?since=%s&filter=%s",
-	                oktaURL, since, encodedFilter
-	        );
+			String urlStr = String.format("%s/api/v1/logs?since=%s&filter=%s", oktaURL, since, encodedFilter);
 
-	        URL url = URI.create(urlStr).toURL();
-	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-	        conn.setRequestMethod("GET");
-	        conn.setRequestProperty("Authorization", "SSWS " + tokenCredentials);
-	        conn.setRequestProperty("Accept", "application/json");
+			URL url = URI.create(urlStr).toURL();
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("Authorization", "SSWS " + tokenCredentials);
+			conn.setRequestProperty("Accept", "application/json");
 
-	        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-	        StringBuilder response = new StringBuilder();
-	        String line;
-	        while ((line = in.readLine()) != null) {
-	            response.append(line);
-	        }
-	        in.close();
+			BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			StringBuilder response = new StringBuilder();
+			String line;
+			while ((line = in.readLine()) != null) {
+				response.append(line);
+			}
+			in.close();
 
-	        ObjectMapper mapper = new ObjectMapper();
-	        JsonNode events = mapper.readTree(response.toString());
+			ObjectMapper mapper = new ObjectMapper();
+			JsonNode events = mapper.readTree(response.toString());
 
-	        DateTimeFormatter outFormatter =
-	                DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+			DateTimeFormatter outFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
 
-	        for (JsonNode event : events) {
+			for (JsonNode event : events) {
 
-	            String eventType = event.path("eventType").asText();
-	            String publishedUtc = event.path("published").asText();
+				String eventType = event.path("eventType").asText();
+				String publishedUtc = event.path("published").asText();
 
-	            String outcome = event.path("outcome").path("result").asText("UNKNOWN");
-	            String failureReason =
-	                    event.path("outcome").path("reason").asText("UNKNOWN_REASON");
+				String outcome = event.path("outcome").path("result").asText("UNKNOWN");
+				String failureReason = event.path("outcome").path("reason").asText("UNKNOWN_REASON");
 
-	            String sessionId = event
-	                    .path("authenticationContext")
-	                    .path("externalSessionId")
-	                    .asText(null);
+				String sessionId = event.path("authenticationContext").path("externalSessionId").asText(null);
 
-	            String profileId = event.path("actor").path("id").asText();
-	            if (profileId == null || profileId.isEmpty()) {
-	                profileId = event.path("actor").path("alternateId").asText();
-	            }
+				String profileId = "unknown";
 
-	            Instant instant = Instant.parse(publishedUtc);
-	            ZonedDateTime etTime = instant.atZone(EASTERN);
+				// Prefer email (alternateId)
+				if (!event.path("actor").path("alternateId").isMissingNode()) {
+					profileId = event.path("actor").path("alternateId").asText();
+				}
 
-	            EventsDTO dto = new EventsDTO();
-	            dto.setId(eventType);
-	            dto.setTimestamp(etTime.format(outFormatter));
-	            dto.setSessionId(sessionId);
-	            dto.setProfileId(profileId);
+				// Fallback to Okta userId
+				else if (!event.path("actor").path("id").isMissingNode()) {
+					profileId = event.path("actor").path("id").asText();
 
-	            eventsList.add(dto);
+				}
 
-	            // ---------- Console Output ----------
-	            if ("user.session.start".equals(eventType)) {
+				Instant instant = Instant.parse(publishedUtc);
+				ZonedDateTime etTime = instant.atZone(EASTERN);
 
-	                if ("FAILURE".equalsIgnoreCase(outcome)) {
-	                    logger.warn(
-	                        "FAILED LOGIN | user={} | reason={} | time={}",
-	                        profileId,
-	                        failureReason,
-	                        dto.getTimestamp()
-	                    );
+				EventsDTO dto = new EventsDTO();
+				dto.setId(eventType);
+				dto.setTimestamp(etTime.format(outFormatter));
+				dto.setSessionId(sessionId);
+				dto.setProfileId(profileId);
 
-	                } else {
-	                    logger.info(
-	                        "LOGIN SUCCESS | user={} | time={}",
-	                        profileId,
-	                        dto.getTimestamp()
-	                    );
-	                }
+				eventsList.add(dto);
 
-	            } else if ("user.session.end".equals(eventType)) {
+				// ---------- Console Output ----------
+				if ("user.session.start".equals(eventType)) {
 
-	                logger.info(
-	                    "LOGOUT | user={} | session={} | time={}",
-	                    profileId,
-	                    sessionId,
-	                    dto.getTimestamp()
-	                );
+					if ("FAILURE".equalsIgnoreCase(outcome)) {
+						logger.warn("FAILED LOGIN | user={} | reason={} | time={}", profileId, failureReason,
+								dto.getTimestamp());
 
-	            } else if ("user.account.activated".equals(eventType)) {
+					} else {
+						logger.info("LOGIN SUCCESS | user={} | time={}", profileId, dto.getTimestamp());
+					}
 
-	                logger.info(
-	                    "ACCOUNT ACTIVATED | user={} | time={}",
-	                    profileId,
-	                    dto.getTimestamp()
-	                );
+				} else if ("user.session.end".equals(eventType)) {
 
-	            } else if ("user.account.deactivated".equals(eventType)) {
+					logger.info("LOGOUT | user={} | session={} | time={}", profileId, sessionId, dto.getTimestamp());
 
-	                logger.warn(
-	                    "ACCOUNT DEACTIVATED | user={} | time={}",
-	                    profileId,
-	                    dto.getTimestamp()
-	                );
-	            }
-	        }
+				} else if ("user.account.activated".equals(eventType)) {
 
-	    } catch (Exception e) {
-	        logger.error("Error fetching Okta events: {}", e.getMessage(), e);
-	    }
+					logger.info("ACCOUNT ACTIVATED | user={} | time={}", profileId, dto.getTimestamp());
 
-	    return eventsList;
+				} else if ("user.account.deactivated".equals(eventType)) {
+
+					logger.warn("ACCOUNT DEACTIVATED | user={} | time={}", profileId, dto.getTimestamp());
+				}
+			}
+
+		} catch (Exception e) {
+			logger.error("Error fetching Okta events: {}", e.getMessage(), e);
+		}
+
+		return eventsList;
 	}
 
 	/*

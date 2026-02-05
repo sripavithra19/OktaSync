@@ -5725,3 +5725,746 @@ java.io.IOException: Server returned HTTP response code: 400 for URL: https://in
 [INFO ] 2026-02-04 13:25:26.404 [main] UserSync - Email failure monitoring completed successfully
 [INFO ] 2026-02-04 13:25:26.405 [main] CommonUtil - Last Sync date is updated to 2026-02-04 13:25:26
 [INFO ] 2026-02-04 13:25:26.406 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 12:54:58.526 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 12:54:58.531 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 12:54:58.532 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 12:54:58.533 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 12:54:58.577 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 12:54:58.578 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 12:54:58.578 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 12:54:58.610 [main] UserSync - Last Sync Date in UTC: 2026-02-04T07:55:26.000Z
+[INFO ] 2026-02-05 12:55:00.167 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 12:55:00.815 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 12:55:00.933 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 12:55:00.939 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 12:55:00.958 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[INFO ] 2026-02-05 12:55:01.474 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 12:55:01.494 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 12:55:01.495 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 12:55:01.495 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 12:55:01.495 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 12:55:01.518 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78cd163b
+[INFO ] 2026-02-05 12:55:01.659 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 12:55:01.742 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 12:55:01.743 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 12:55:02.090 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 12:55:02.114 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2b2f5fcf
+[INFO ] 2026-02-05 12:55:02.133 [main] EmailMonitorService - No new unprocessed email failures found
+[INFO ] 2026-02-05 12:55:02.466 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 12:55:02.470 [main] CommonUtil - Last Sync date is updated to 2026-02-05 12:55:02
+[INFO ] 2026-02-05 12:55:02.471 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 12:55:49.399 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 12:55:49.403 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 12:55:49.404 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 12:55:49.404 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 12:55:49.414 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 12:55:49.414 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 12:55:49.414 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 12:55:49.424 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 12:55:50.918 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 12:55:51.256 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 12:55:51.374 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 12:55:51.383 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 12:55:51.406 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 12:55:52.348 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 12:55:52.349 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 12:55:52.349 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 12:55:52.349 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 12:55:52.350 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 12:55:52.350 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 12:55:52.350 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 12:55:52.351 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 12:55:52.351 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 12:55:52.351 [main] OktaService - LOGIN SUCCESS | user=00uy6mzpahJ6AGduo697 | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 12:55:52.372 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 12:55:52.373 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.373 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.373 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.373 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.373 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.374 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.374 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.374 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.374 [main] DBService - No user ID found for email: unknown
+[WARN ] 2026-02-05 12:55:52.374 [main] DBService - No user ID found for email: 00uy6mzpahJ6AGduo697
+[INFO ] 2026-02-05 12:55:52.375 [main] DBService - Inserted 0 events into DSS_DPS_EVENT
+[INFO ] 2026-02-05 12:55:52.376 [main] UserSync - Successfully synced 10 events
+[INFO ] 2026-02-05 12:55:52.378 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 12:55:52.378 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 12:55:52.378 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 12:55:52.378 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 12:55:52.400 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@312b34e3
+[INFO ] 2026-02-05 12:55:52.448 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 12:55:52.474 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 12:55:52.476 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 12:55:53.257 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 12:55:53.257 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 12:55:53.257 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 12:55:53.275 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1bc0d349
+[INFO ] 2026-02-05 12:55:53.293 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 12:55:53.317 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@20cece0b
+[INFO ] 2026-02-05 12:55:53.358 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 12:55:53.359 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 12:55:53.359 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 12:55:53.379 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14b789f6
+[INFO ] 2026-02-05 12:55:53.388 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 12:55:53.390 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 12:55:54.202 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 12:55:54.202 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 12:55:54.202 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 12:55:54.203 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 12:55:54.203 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 12:55:54.203 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 12:55:54.203 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 12:55:54.203 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 12:55:54.204 [main] OktaService - FAILED LOGIN | user=unknown | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 12:55:54.204 [main] OktaService - LOGIN SUCCESS | user=00uy6mzpahJ6AGduo697 | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 12:55:54.204 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 12:55:54.206 [main] CommonUtil - Last Sync date is updated to 2026-02-05 12:55:54
+[INFO ] 2026-02-05 12:55:54.207 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:05:49.926 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:05:49.931 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:05:49.931 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:05:49.933 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:05:49.948 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:05:49.949 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:05:49.949 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:05:49.962 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 13:05:52.722 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:05:53.160 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 13:05:53.279 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:05:53.285 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:05:53.303 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 13:05:54.212 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:05:54.213 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:05:54.213 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:05:54.213 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:05:54.213 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:05:54.214 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:05:54.214 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:05:54.214 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:05:54.215 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:05:54.215 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:05:54.234 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 13:05:54.234 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:05:54.234 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:05:54.235 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:05:54.235 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:05:54.235 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:05:54.235 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:05:54.236 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:05:54.236 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:05:54.236 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[ERROR] 2026-02-05 13:05:54.253 [main] DBService - Error inserting events: ORA-01861: literal does not match format string
+
+java.sql.BatchUpdateException: ORA-01861: literal does not match format string
+
+	at oracle.jdbc.driver.OraclePreparedStatement.generateBatchUpdateException(OraclePreparedStatement.java:10041) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatchWithoutQueue(OraclePreparedStatement.java:9803) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeBatch(OraclePreparedStatement.java:9677) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeBatch(OracleStatement.java:4963) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:285) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at com.aegis.portal.db.DBService.insertEvents(DBService.java:107) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:75) ~[classes/:?]
+[INFO ] 2026-02-05 13:05:54.260 [main] UserSync - Successfully synced 10 events
+[INFO ] 2026-02-05 13:05:54.261 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:05:54.262 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:05:54.262 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:05:54.262 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:05:54.283 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@de8039f
+[INFO ] 2026-02-05 13:05:55.363 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:05:55.402 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:05:55.404 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 13:05:56.204 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:05:56.204 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:05:56.204 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:05:56.226 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78d6447a
+[INFO ] 2026-02-05 13:05:56.233 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 13:05:56.252 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2d9dff65
+[INFO ] 2026-02-05 13:05:56.273 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 13:05:56.274 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:05:56.274 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:05:56.291 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@10a0fe30
+[INFO ] 2026-02-05 13:05:56.296 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 13:05:56.297 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 13:05:57.170 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:05:57.171 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:05:57.171 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:05:57.172 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:05:57.172 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:05:57.172 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:05:57.173 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:05:57.173 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:05:57.173 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:05:57.173 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:05:57.173 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:05:57.175 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:05:57
+[INFO ] 2026-02-05 13:05:57.175 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:11:25.492 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:11:25.498 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:11:25.498 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:11:25.498 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:11:25.513 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:11:25.513 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:11:25.513 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:11:25.540 [main] UserSync - Last Sync Date in UTC: 2026-02-05T07:35:57.000Z
+[INFO ] 2026-02-05 13:11:27.234 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:11:27.664 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 13:11:27.798 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:11:27.802 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:11:27.821 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[ERROR] 2026-02-05 13:11:28.269 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:05:57Z&filter=eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:05:57Z&filter=eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:227) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:72) ~[classes/:?]
+[INFO ] 2026-02-05 13:11:28.280 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 13:11:28.282 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:11:28.282 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:11:28.283 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:11:28.283 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:11:28.300 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@13d9261f
+[INFO ] 2026-02-05 13:11:28.358 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:11:28.399 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:11:28.401 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 13:11:29.572 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:11:29.593 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58ff8d79
+[INFO ] 2026-02-05 13:11:29.633 [main] EmailMonitorService - No new unprocessed email failures found
+[ERROR] 2026-02-05 13:11:29.916 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:05:57Z&filter=eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:05:57Z&filter=eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:227) ~[classes/:?]
+	at com.aegis.portal.service.EmailMonitorService.monitorEmailFailures(EmailMonitorService.java:60) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.monitorEmailFailures(UserSync.java:97) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:83) ~[classes/:?]
+[INFO ] 2026-02-05 13:11:29.918 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:11:29.921 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:11:29
+[INFO ] 2026-02-05 13:11:29.923 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:15:55.935 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:15:55.940 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:15:55.940 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:15:55.941 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:15:55.956 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:15:55.956 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:15:55.956 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:15:55.967 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 13:15:58.066 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:15:58.470 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 13:15:58.583 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:15:58.588 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:15:58.607 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 13:15:59.444 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:15:59.444 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:15:59.444 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:15:59.444 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:15:59.445 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:15:59.445 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:15:59.445 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:15:59.445 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:15:59.446 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:15:59.446 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:15:59.446 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:15:59.447 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:15:59.465 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 13:15:59.465 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:15:59.466 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:15:59.467 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:15:59.467 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[ERROR] 2026-02-05 13:15:59.475 [main] DBService - Error inserting events: ORA-01861: literal does not match format string
+
+java.sql.BatchUpdateException: ORA-01861: literal does not match format string
+
+	at oracle.jdbc.driver.OraclePreparedStatement.generateBatchUpdateException(OraclePreparedStatement.java:10041) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatchWithoutQueue(OraclePreparedStatement.java:9803) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeBatch(OraclePreparedStatement.java:9677) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeBatch(OracleStatement.java:4963) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:285) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at com.aegis.portal.db.DBService.insertEvents(DBService.java:107) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:75) ~[classes/:?]
+[INFO ] 2026-02-05 13:15:59.481 [main] UserSync - Successfully synced 12 events
+[INFO ] 2026-02-05 13:15:59.483 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:15:59.483 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:15:59.483 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:15:59.483 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:15:59.502 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@de8039f
+[INFO ] 2026-02-05 13:15:59.553 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:15:59.605 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:15:59.607 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 13:16:00.415 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:16:00.415 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:16:00.416 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:16:00.435 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78d6447a
+[INFO ] 2026-02-05 13:16:00.442 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 13:16:00.461 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2d9dff65
+[INFO ] 2026-02-05 13:16:00.484 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 13:16:00.485 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:16:00.485 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:16:00.505 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@10a0fe30
+[INFO ] 2026-02-05 13:16:00.510 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 13:16:00.511 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 13:16:01.316 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:16:01.317 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:16:01.317 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:16:01.317 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:16:01.318 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:16:01.318 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:16:01.318 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:16:01.318 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:16:01.319 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:16:01.319 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:16:01.319 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:16:01.319 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:16:01.320 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:16:01.321 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:16:01
+[INFO ] 2026-02-05 13:16:01.322 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:17:11.580 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:17:11.584 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:17:11.584 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:17:11.584 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:17:11.595 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:17:11.596 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:17:11.596 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:17:11.621 [main] UserSync - Last Sync Date in UTC: 2026-02-05T07:46:01.000Z
+[INFO ] 2026-02-05 13:17:13.129 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:17:13.475 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 13:17:13.568 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:17:13.573 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:17:13.594 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[ERROR] 2026-02-05 13:17:13.996 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:16:01Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:16:01Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:72) ~[classes/:?]
+[INFO ] 2026-02-05 13:17:14.011 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 13:17:14.012 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:17:14.013 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:17:14.013 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:17:14.013 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:17:14.033 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@13d9261f
+[INFO ] 2026-02-05 13:17:14.089 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:17:14.126 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:17:14.128 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 13:17:15.343 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:17:15.390 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58ff8d79
+[INFO ] 2026-02-05 13:17:15.398 [main] EmailMonitorService - No new unprocessed email failures found
+[ERROR] 2026-02-05 13:17:15.696 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:16:01Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:16:01Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.service.EmailMonitorService.monitorEmailFailures(EmailMonitorService.java:60) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.monitorEmailFailures(UserSync.java:97) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:83) ~[classes/:?]
+[INFO ] 2026-02-05 13:17:15.696 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:17:15.698 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:17:15
+[INFO ] 2026-02-05 13:17:15.699 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:17:59.972 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:17:59.976 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:17:59.977 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:17:59.977 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:17:59.989 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:17:59.989 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:17:59.989 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:17:59.998 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 13:18:01.479 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:18:01.819 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 13:18:01.943 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:18:01.949 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:18:01.971 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 13:18:02.866 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:18:02.866 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:18:02.867 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:18:02.867 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:18:02.867 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:18:02.867 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:18:02.867 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:18:02.868 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:18:02.868 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:18:02.868 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:18:02.868 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:18:02.869 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:18:02.869 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:18:02.869 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:18:02.870 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:18:02.890 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 13:18:02.891 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:18:02.891 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:18:02.891 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:18:02.891 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:18:02.891 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:18:02.892 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:18:02.892 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:18:02.892 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:18:02.892 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[ERROR] 2026-02-05 13:18:02.896 [main] DBService - Error inserting events: ORA-01861: literal does not match format string
+
+java.sql.BatchUpdateException: ORA-01861: literal does not match format string
+
+	at oracle.jdbc.driver.OraclePreparedStatement.generateBatchUpdateException(OraclePreparedStatement.java:10041) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatchWithoutQueue(OraclePreparedStatement.java:9803) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeBatch(OraclePreparedStatement.java:9677) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeBatch(OracleStatement.java:4963) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:285) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at com.aegis.portal.db.DBService.insertEvents(DBService.java:107) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:75) ~[classes/:?]
+[INFO ] 2026-02-05 13:18:02.907 [main] UserSync - Successfully synced 15 events
+[INFO ] 2026-02-05 13:18:02.908 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:18:02.908 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:18:02.909 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:18:02.909 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:18:02.925 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@de8039f
+[INFO ] 2026-02-05 13:18:02.975 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:18:03.000 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:18:03.002 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 13:18:03.796 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:18:03.796 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:18:03.796 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:18:03.815 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78d6447a
+[INFO ] 2026-02-05 13:18:03.847 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 13:18:03.867 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2d9dff65
+[INFO ] 2026-02-05 13:18:03.888 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 13:18:03.889 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:18:03.889 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:18:03.907 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@10a0fe30
+[INFO ] 2026-02-05 13:18:03.911 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 13:18:03.912 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 13:18:04.745 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:18:04.745 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:18:04.746 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:18:04.746 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:18:04.746 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:18:04.747 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:18:04.747 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:18:04.748 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:18:04.748 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:18:04.748 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:18:04.748 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:18:04.749 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:18:04.749 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:18:04.749 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:18:04.749 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:18:04.750 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:18:04.751 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:18:04
+[INFO ] 2026-02-05 13:18:04.753 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:23:13.007 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:23:13.012 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:23:13.013 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:23:13.013 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:23:13.030 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:23:13.031 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:23:13.031 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:23:13.043 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 13:23:14.763 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:23:15.146 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 13:23:15.261 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:23:15.267 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:23:15.289 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 13:23:16.229 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:23:16.229 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:23:16.229 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:23:16.230 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:23:16.230 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:23:16.230 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:23:16.230 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:23:16.230 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:23:16.231 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:23:16.231 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:23:16.231 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:23:16.231 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:23:16.232 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:23:16.232 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:23:16.232 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:23:16.252 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 13:23:16.252 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:23:16.252 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:23:16.253 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[ERROR] 2026-02-05 13:23:16.259 [main] DBService - Error inserting events: ORA-01861: literal does not match format string
+
+java.sql.BatchUpdateException: ORA-01861: literal does not match format string
+
+	at oracle.jdbc.driver.OraclePreparedStatement.generateBatchUpdateException(OraclePreparedStatement.java:10041) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatchWithoutQueue(OraclePreparedStatement.java:9803) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeBatch(OraclePreparedStatement.java:9677) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeBatch(OracleStatement.java:4963) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:285) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at com.aegis.portal.db.DBService.insertEvents(DBService.java:107) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:75) ~[classes/:?]
+[INFO ] 2026-02-05 13:23:16.269 [main] UserSync - Successfully synced 15 events
+[INFO ] 2026-02-05 13:23:16.270 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:23:16.270 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:23:16.270 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:23:16.271 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:23:16.288 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@de8039f
+[INFO ] 2026-02-05 13:23:16.349 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:23:16.387 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:23:16.388 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 13:23:17.190 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:23:17.190 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:23:17.191 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:23:17.210 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78d6447a
+[INFO ] 2026-02-05 13:23:17.217 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 13:23:17.238 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2d9dff65
+[INFO ] 2026-02-05 13:23:17.258 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 13:23:17.259 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:23:17.259 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:23:17.277 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@10a0fe30
+[INFO ] 2026-02-05 13:23:17.281 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 13:23:17.282 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 13:23:17.979 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:23:17.980 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:23:17.980 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:23:17.981 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:23:17.981 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:23:17.981 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:23:17.982 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:23:17.982 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:23:17.982 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:23:17.982 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:23:17.984 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:23:17.984 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:23:17.984 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:23:17.984 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:23:17.984 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:23:17.984 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:23:17.986 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:23:17
+[INFO ] 2026-02-05 13:23:17.987 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:23:30.988 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:23:30.993 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:23:30.993 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:23:30.993 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:23:31.007 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:23:31.007 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:23:31.007 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:23:31.029 [main] UserSync - Last Sync Date in UTC: 2026-02-05T07:53:17.000Z
+[INFO ] 2026-02-05 13:23:32.479 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:23:32.806 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 13:23:32.901 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:23:32.906 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:23:32.925 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[ERROR] 2026-02-05 13:23:33.326 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:17Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:17Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:72) ~[classes/:?]
+[INFO ] 2026-02-05 13:23:33.335 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 13:23:33.337 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:23:33.338 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:23:33.339 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:23:33.339 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:23:33.359 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@13d9261f
+[INFO ] 2026-02-05 13:23:33.411 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:23:33.453 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:23:33.454 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 13:23:34.559 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:23:34.577 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58ff8d79
+[INFO ] 2026-02-05 13:23:34.592 [main] EmailMonitorService - No new unprocessed email failures found
+[ERROR] 2026-02-05 13:23:34.885 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:17Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:17Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.service.EmailMonitorService.monitorEmailFailures(EmailMonitorService.java:60) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.monitorEmailFailures(UserSync.java:97) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:83) ~[classes/:?]
+[INFO ] 2026-02-05 13:23:34.887 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:23:34.889 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:23:34
+[INFO ] 2026-02-05 13:23:34.890 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:25:15.169 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:25:15.173 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:25:15.173 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:25:15.174 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:25:15.185 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:15.185 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:15.186 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:15.208 [main] UserSync - Last Sync Date in UTC: 2026-02-05T07:53:34.000Z
+[INFO ] 2026-02-05 13:25:16.693 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:25:17.011 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 13:25:17.109 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:25:17.114 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:25:17.134 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[ERROR] 2026-02-05 13:25:17.517 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:34Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:34Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:72) ~[classes/:?]
+[INFO ] 2026-02-05 13:25:17.526 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 13:25:17.528 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:17.528 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:17.529 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:17.529 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:25:17.546 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@13d9261f
+[INFO ] 2026-02-05 13:25:17.592 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:25:17.642 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:25:17.643 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 13:25:18.767 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:25:18.789 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58ff8d79
+[INFO ] 2026-02-05 13:25:18.801 [main] EmailMonitorService - No new unprocessed email failures found
+[ERROR] 2026-02-05 13:25:19.083 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:34Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:23:34Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.service.EmailMonitorService.monitorEmailFailures(EmailMonitorService.java:60) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.monitorEmailFailures(UserSync.java:97) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:83) ~[classes/:?]
+[INFO ] 2026-02-05 13:25:19.084 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:25:19.087 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:25:19
+[INFO ] 2026-02-05 13:25:19.087 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:25:35.592 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:25:35.597 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:25:35.598 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:25:35.598 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:25:35.609 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:35.609 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:35.610 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:35.630 [main] UserSync - Last Sync Date in UTC: 2026-02-05T07:55:19.000Z
+[INFO ] 2026-02-05 13:25:37.090 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:25:37.447 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@c68a5f8
+[INFO ] 2026-02-05 13:25:37.545 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:25:37.552 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:25:37.572 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@14379273
+[ERROR] 2026-02-05 13:25:37.979 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:25:19Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:25:19Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:72) ~[classes/:?]
+[INFO ] 2026-02-05 13:25:37.990 [main] UserSync - No new events fetched.
+[INFO ] 2026-02-05 13:25:37.991 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:37.991 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:37.992 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:37.992 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:25:38.011 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@13d9261f
+[INFO ] 2026-02-05 13:25:38.056 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:25:38.093 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:25:38.095 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[INFO ] 2026-02-05 13:25:39.199 [main] OktaService - Found 0 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:25:39.225 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@58ff8d79
+[INFO ] 2026-02-05 13:25:39.235 [main] EmailMonitorService - No new unprocessed email failures found
+[ERROR] 2026-02-05 13:25:39.531 [main] OktaService - Error fetching Okta events: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:25:19Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+java.io.IOException: Server returned HTTP response code: 400 for URL: https://integrator-5922378.okta.com/api/v1/logs?since=2026-02-05T18:25:19Z&filter=%28eventType+eq+%22user.session.start%22+or+eventType+eq+%22user.session.end%22+or+eventType+eq+%22user.account.activated%22+or+eventType+eq+%22user.account.deactivated%22%29
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223) ~[?:?]
+	at com.aegis.portal.okta.OktaService.fetchEvents(OktaService.java:230) ~[classes/:?]
+	at com.aegis.portal.service.EmailMonitorService.monitorEmailFailures(EmailMonitorService.java:60) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.monitorEmailFailures(UserSync.java:97) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:83) ~[classes/:?]
+[INFO ] 2026-02-05 13:25:39.532 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:25:39.535 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:25:39
+[INFO ] 2026-02-05 13:25:39.536 [main] UserSync - Sync process completed
+[INFO ] 2026-02-05 13:25:53.128 [main] UserSync - === Aegis User and Event Sync ===
+[INFO ] 2026-02-05 13:25:53.132 [main] UserSync - Portal Env: dev
+[INFO ] 2026-02-05 13:25:53.133 [main] UserSync - Okta Env: dev
+[INFO ] 2026-02-05 13:25:53.133 [main] UserSync - Email Monitoring: ENABLED
+[INFO ] 2026-02-05 13:25:53.145 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:53.145 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:53.145 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:53.154 [main] UserSync - Last Sync Date in UTC: 2025-09-17T05:36:50.000Z
+[INFO ] 2026-02-05 13:25:54.591 [main] OktaService - Fetched 3 users from Okta
+[INFO ] 2026-02-05 13:25:54.914 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@1450078a
+[INFO ] 2026-02-05 13:25:55.003 [main] DBService - Inserted or skipped 3 users into DPS_USER
+[INFO ] 2026-02-05 13:25:55.008 [main] UserSync - Successfully synced 3 users
+[INFO ] 2026-02-05 13:25:55.028 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@46d9aec8
+[WARN ] 2026-02-05 13:25:55.893 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:25:55.893 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:25:55.894 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:25:55.894 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:25:55.894 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:25:55.894 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:25:55.894 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:25:55.895 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:25:55.895 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:25:55.895 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:25:55.896 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:25:55.896 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:25:55.896 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:25:55.897 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:25:55.897 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:25:55.897 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:54:19
+[INFO ] 2026-02-05 13:25:55.916 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@858d8b4
+[WARN ] 2026-02-05 13:25:55.916 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:25:55.917 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:25:55.918 [main] DBService - No user ID found for email: smanogaran@ciberspring.com
+[WARN ] 2026-02-05 13:25:55.918 [main] DBService - No user ID found for email: smanogaran.ciberspring.com
+[ERROR] 2026-02-05 13:25:55.922 [main] DBService - Error inserting events: ORA-01861: literal does not match format string
+
+java.sql.BatchUpdateException: ORA-01861: literal does not match format string
+
+	at oracle.jdbc.driver.OraclePreparedStatement.generateBatchUpdateException(OraclePreparedStatement.java:10041) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatchWithoutQueue(OraclePreparedStatement.java:9803) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeBatch(OraclePreparedStatement.java:9677) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeBatch(OracleStatement.java:4963) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:285) ~[ojdbc8-23.2.0.0.jar:23.2.0.0.0]
+	at com.aegis.portal.db.DBService.insertEvents(DBService.java:107) ~[classes/:?]
+	at com.aegis.portal.migration.UserSync.main(UserSync.java:75) ~[classes/:?]
+[INFO ] 2026-02-05 13:25:55.938 [main] UserSync - Successfully synced 16 events
+[INFO ] 2026-02-05 13:25:55.939 [main] OktaService - Cleaned token length: 42
+[INFO ] 2026-02-05 13:25:55.939 [main] OktaService - Token first 10 chars: 00NaPBxu7k
+[INFO ] 2026-02-05 13:25:55.939 [main] OktaService - Okta Configuration - URL: https://integrator-5922378.okta.com, AppID: 0oay6n4ls99kHfziY697
+[INFO ] 2026-02-05 13:25:55.939 [main] EmailMonitorService - Starting Okta email failure monitoring...
+[INFO ] 2026-02-05 13:25:55.956 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@de8039f
+[INFO ] 2026-02-05 13:25:56.022 [main] DBService - Dropped existing OKTA_EMAIL_FAILURES table
+[INFO ] 2026-02-05 13:25:56.053 [main] DBService - OKTA_EMAIL_FAILURES table and sequence created successfully
+[INFO ] 2026-02-05 13:25:56.055 [main] OktaService - Fetching email delivery events with filter: eventType eq "system.email.delivery"
+[WARN ] 2026-02-05 13:25:56.772 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:25:56.772 [main] OktaService - EMAIL FAILURE | Time: 2025-12-09 15:54:01 IST | Email: test@invalid12345domain.com | Reason: bounce [INFO] | EventId: 2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:25:56.772 [main] OktaService - Found 2 email failure/bounce events from Okta
+[INFO ] 2026-02-05 13:25:56.791 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@78d6447a
+[INFO ] 2026-02-05 13:25:56.799 [main] DBService - Successfully stored 2 email failures in database
+[INFO ] 2026-02-05 13:25:56.818 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@2d9dff65
+[INFO ] 2026-02-05 13:25:56.840 [main] EmailMonitorService - Found 2 unprocessed email failures
+[WARN ] 2026-02-05 13:25:56.840 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e63b526-d4e9-11f0-b05d-2dc7bf30c6f2
+[WARN ] 2026-02-05 13:25:56.841 [main] EmailMonitorService - [OKTA_EMAIL_FAILURE] time=2025-12-09 05:24:01 ET | email=test@invalid12345domain.com | reason=bounce [INFO] | eventId=2e457e75-d4e9-11f0-b05d-2dc7bf30c6f2
+[INFO ] 2026-02-05 13:25:56.858 [main] DBConnection - DB Connection = oracle.jdbc.driver.T4CConnection@10a0fe30
+[INFO ] 2026-02-05 13:25:56.863 [main] DBService - Marked 2 email failure events as processed
+[INFO ] 2026-02-05 13:25:56.864 [main] EmailMonitorService - Processed 2 email failure notifications
+[WARN ] 2026-02-05 13:25:57.717 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:27
+[WARN ] 2026-02-05 13:25:57.717 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:31:50
+[WARN ] 2026-02-05 13:25:57.718 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:32:53
+[WARN ] 2026-02-05 13:25:57.718 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:33:28
+[WARN ] 2026-02-05 13:25:57.718 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:30
+[WARN ] 2026-02-05 13:25:57.718 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:31
+[WARN ] 2026-02-05 13:25:57.718 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:34:55
+[WARN ] 2026-02-05 13:25:57.719 [main] OktaService - FAILED LOGIN | user=smanogaran@ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:21
+[WARN ] 2026-02-05 13:25:57.719 [main] OktaService - FAILED LOGIN | user=smanogaran.ciberspring.com | reason=VERIFICATION_ERROR | time=2026-01-30T06:35:54
+[INFO ] 2026-02-05 13:25:57.719 [main] OktaService - LOGIN SUCCESS | user=smanogaran+new@ciberspring.com | time=2026-01-30T06:40:54
+[INFO ] 2026-02-05 13:25:57.719 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:38:14
+[INFO ] 2026-02-05 13:25:57.720 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:40:25
+[INFO ] 2026-02-05 13:25:57.720 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=102TMhFKgIFTI-R8zQAA_DVHA | time=2026-02-05T02:46:37
+[INFO ] 2026-02-05 13:25:57.720 [main] OktaService - LOGOUT | user=rnarasimhamurthy@ciberspring.com | session=idxvlMQI3ExQOWhGhwQLDD6EA | time=2026-02-05T02:46:38
+[INFO ] 2026-02-05 13:25:57.720 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:46:56
+[INFO ] 2026-02-05 13:25:57.721 [main] OktaService - LOGIN SUCCESS | user=rnarasimhamurthy@ciberspring.com | time=2026-02-05T02:54:19
+[INFO ] 2026-02-05 13:25:57.721 [main] UserSync - Email failure monitoring completed successfully
+[INFO ] 2026-02-05 13:25:57.723 [main] CommonUtil - Last Sync date is updated to 2026-02-05 13:25:57
+[INFO ] 2026-02-05 13:25:57.724 [main] UserSync - Sync process completed
